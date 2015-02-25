@@ -1,2 +1,3 @@
 # inf-action-card
-An action card component with an animated popup
+
+See the [component page](http://infusionsoft.github.io/inf-action-card/bower_components/inf-action-card/) for more information.
