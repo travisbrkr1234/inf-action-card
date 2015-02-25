@@ -1,0 +1,12 @@
+{
+  "main": "inf-action-card.html",
+  "name": "inf-action-card",
+  "private": true,
+  "dependencies": {
+    "polymer": "Polymer/polymer#0.5"
+  },
+  "homepage": "https://github.com/infusionsoft/inf-action-card",
+  "ignore": [
+    ".gitignore"
+  ]
+}
