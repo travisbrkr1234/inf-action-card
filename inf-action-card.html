@@ -8,6 +8,8 @@
 @homepage http://github.com/infusionsoft/inf-action-card/
 -->
 <link rel="import" href="../polymer/polymer.html"/>
+<link rel="import" href="../core-icon/core-icon.html" />
+<link rel="import" href="../core-icons/core-icons.html" />
 
 <polymer-element name="inf-action-card">
     <template>
@@ -33,14 +35,15 @@
                 font-weight: 700;
             }
 
-            img {
+            #icon {
+                height: 80px;
                 width: 80px;
             }
         </style>
 
         <div id="cardFront">
-            <h1>Get Started</h1>
-            <img src="//infusionmedia.s3.amazonaws.com/product/gettingstarted.png" alt="Get Started">
+            <h1>Get Checked</h1>
+            <core-icon id="icon" icon="check"></core-icon>
         </div>
     </template>
     <script>

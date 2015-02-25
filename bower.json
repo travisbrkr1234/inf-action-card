@@ -3,7 +3,9 @@
   "name": "inf-action-card",
   "private": true,
   "dependencies": {
-    "polymer": "Polymer/polymer#0.5"
+    "polymer": "Polymer/polymer#0.5",
+    "core-icon": "Polymer/core-icon#0.5",
+    "core-icons": "Polymer/core-icons#0.5"
   },
   "devDependencies": {
     "web-component-tester": "Polymer/web-component-tester#^2.2.3"
