@@ -10,8 +10,12 @@
 <link rel="import" href="../polymer/polymer.html"/>
 <link rel="import" href="../core-icon/core-icon.html" />
 <link rel="import" href="../core-icons/core-icons.html" />
+<link rel="import" href="../core-animated-pages/core-animated-pages.html" />
+<link rel="import" href="../core-animated-pages/transitions/slide-up.html" />
+<link rel="import" href="../core-animated-pages/transitions/cross-fade.html" />
+<link rel="import" href="../paper-button/paper-button.html" />
 
-<polymer-element name="inf-action-card">
+<polymer-element name="inf-action-card" on-mouseenter="{{ showBack }}" on-mouseleave="{{ showFront }}">
     <template>
         <style>
             :host {
@@ -39,17 +43,39 @@
                 height: 80px;
                 width: 80px;
             }
+
+            paper-button {
+                background-color: #51A3DC;
+                color: #FFF;
+                border: 1px solid #125079;
+            }
         </style>
 
-        <div id="cardFront">
-            <h1>Get Checked</h1>
-            <core-icon id="icon" icon="check"></core-icon>
-        </div>
+        <core-animated-pages id="pages" transitions="slide-up cross-fade" selected="0">
+            <section>
+                <div id="cardFront" cross-fade>
+                    <h1>Get Checked</h1>
+                    <core-icon id="icon" icon="check"></core-icon>
+                </div>
+            </section>
+            <section>
+                <div id="cardBack" slide-up>
+                    <p>Review the navigation, learn where to find help and jump into Infusionsoft.</p>
+                    <paper-button id="button">Select</paper-button>
+                </div>
+            </section>
+        </core-animated-pages>
     </template>
     <script>
         (function() {
             "use strict";
             Polymer({
+                showBack: function() {
+                    this.$.pages.selected = 1;
+                },
+                showFront: function() {
+                    this.$.pages.selected = 0;
+                }
             });
         })();
     </script>
