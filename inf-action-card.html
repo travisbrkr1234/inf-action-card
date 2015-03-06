@@ -70,9 +70,20 @@
         (function() {
             "use strict";
             Polymer({
+                /**
+                 * Animates the back of the card open.
+                 *
+                 * @method showBack
+                 */
                 showBack: function() {
                     this.$.pages.selected = 1;
                 },
+
+                /**
+                 * Animates the front of the card open.
+                 *
+                 * @method showFront
+                 */
                 showFront: function() {
                     this.$.pages.selected = 0;
                 }
