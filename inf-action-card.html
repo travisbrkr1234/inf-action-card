@@ -1,7 +1,7 @@
-  <!--
+<!--
 `inf-action-card` is a polymer element with an animated popup.
 
-    <inf-action-card></inf-action-card>
+  <inf-action-card></inf-action-card>
 
 @group Infusionsoft Elements
 @element inf-action-card
@@ -16,78 +16,81 @@
 <link rel="import" href="../paper-button/paper-button.html" />
 
 <polymer-element name="inf-action-card" on-mouseenter="{{ showBack }}" on-mouseleave="{{ showFront }}">
-    <template>
-        <style>
-            :host {
-                background-color: #fff;
-                border: 1px solid #ddd;
-                border-radius: 3px;
-                box-shadow: 0 2px 3px -1px rgba(0,0,0,0.1);
-                display: block;
-                margin: 10px;
-                overflow: hidden;
-                position: relative;
-                text-align: center;
+  <template>
+      <style>
+      :host {
+  background-color: #F5F5F5;
+  border: 1px dashed #ddd;
+  border-radius: 3px;
+  box-shadow: 0 2px 3px -1px rgba(0,0,0,0.1);
+  display: block;
+  margin: 10px;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
 
-                width: 226px;
-                height: 190px;
-            }
+  width: 226px;
+  height: 190px;
+}
 
-            h1 {
-                margin-top: 30px;
-                font-size: 15px;
-                font-weight: 700;
-            }
+h1 {
+  margin-top: 30px;
+  font-family: Helvetica;
+  color: #303442;
+  font-size: 15px;
+  font-weight: 700;
+}
 
-            #icon {
-                height: 80px;
-                width: 80px;
-            }
+#icon {
+  height: 100px;
+  width: 100px;
+  color: #79BE37;
+}
 
-            paper-button {
-                background-color: #51A3DC;
-                color: #FFF;
-                border: 1px solid #125079;
-            }
-        </style>
+paper-button {
+  background-color: #51A3DC;
+  color: #FFF;
+  border: 1px solid #125079;
+}
+      </style>
 
-        <core-animated-pages id="pages" transitions="slide-up cross-fade" selected="0">
-            <section>
-                <div id="cardFront" cross-fade>
-                    <h1>Get Checked</h1>
-                    <core-icon id="icon" icon="check"></core-icon>
-                </div>
-            </section>
-            <section>
-                <div id="cardBack" slide-up>
-                    <p>Review the navigation, learn where to find help and jump into Infusionsoft.</p>
-                    <paper-button id="button">Select</paper-button>
-                </div>
-            </section>
-        </core-animated-pages>
-    </template>
-    <script>
-        (function() {
-            "use strict";
-            Polymer({
-                /**
-                 * Animates the back of the card open.
-                 *
-                 * @method showBack
-                 */
-                showBack: function() {
-                    this.$.pages.selected = 1;
-                },
+      <core-animated-pages id="pages" transitions="slide-up cross-fade" selected="0">
+          <section>
+              <div id="cardFront" cross-fade>
+                  <h1>Check yoself befo you wreck yoself!</h1>
+                  <core-icon id="icon" icon="check"></core-icon>
+              </div>
+          </section>
+          <section>
+              <div id="cardBack" slide-up>
+                  <p>Review the navigation, learn where to find help and jump into Infusionsoft.</p>
+                  <paper-button id="button">Select</paper-button>
+              </div>
+          </section>
+      </core-animated-pages>
+  </template>
+  <script>
+      (function() {
+          "use strict";
+          Polymer({
+              /**
+               * Animates the back of the card open.
+               *
+               * @method showBack
+               */
+              showBack: function() {
+                  this.$.pages.selected = 1;
+              },
 
-                /**
-                 * Animates the front of the card open.
-                 *
-                 * @method showFront
-                 */
-                showFront: function() {
-                    this.$.pages.selected = 0;
-                }
-            });
-        })();
-    </script>
+              /**
+               * Animates the front of the card open.
+               *
+               * @method showFront
+               */
+              showFront: function() {
+                  this.$.pages.selected = 0;
+              }
+          });
+      })();
+  </script>
 </polymer-element>
