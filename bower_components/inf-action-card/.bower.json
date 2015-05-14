@@ -11,15 +11,5 @@
   "homepage": "https://github.com/infusionsoft/inf-action-card",
   "ignore": [
     ".gitignore"
-  ],
-  "_release": "step-1",
-  "_resolution": {
-    "type": "tag",
-    "tag": "step-1",
-    "commit": "30f20c9f3dccb5f4d13ba336450d04477baa88d0"
-  },
-  "_source": "https://github.com/travisbrkr1234/inf-action-card.git",
-  "_target": "step-1",
-  "_originalSource": "https://github.com/travisbrkr1234/inf-action-card.git",
-  "_direct": true
+  ]
 }
